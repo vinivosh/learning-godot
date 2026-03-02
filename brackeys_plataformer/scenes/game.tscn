@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dahqkwokwgwew" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://5s53l0yluts5" path="res://scenes/enemy_slime_green.tscn" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://ci6egf2v1a8vm" path="res://scenes/enemy_slime_green.gd" id="7_u5sy4"]
+[ext_resource type="FontFile" uid="uid://h62h02bu51hi" path="res://assets/fonts/PixelOperator8.ttf" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -331,3 +332,35 @@ position = Vector2(797, 88)
 [node name="Enemy-Slime-Green" parent="." unique_id=615556331 instance=ExtResource("6_p57ef")]
 position = Vector2(300, 97)
 script = ExtResource("7_u5sy4")
+
+[node name="Text_In_World" type="Node" parent="." unique_id=1385598762]
+
+[node name="Tip-Jump" type="Label" parent="Text_In_World" unique_id=1181300086]
+offset_left = 54.0
+offset_top = 54.0
+offset_right = 179.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "Press space to jump"
+
+[node name="Tip-Falling" type="Label" parent="Text_In_World" unique_id=533092931]
+offset_left = 442.0
+offset_top = 69.0
+offset_right = 532.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "Falling hurts…"
+
+[node name="Tip-Close-To-End" type="Label" parent="Text_In_World" unique_id=1217081737]
+offset_left = 691.0
+offset_top = 69.0
+offset_right = 781.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "Almost there!"
